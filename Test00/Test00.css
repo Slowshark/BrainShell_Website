@@ -1,0 +1,468 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: black;
+  background-color: whitesmoke;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: black;
+  background-color: whitesmoke;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+.content {
+  padding-top: 70px; /* Pour compenser la hauteur de la navbar */
+}
+
+.bouncing-blobs-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: calc(100vh - 70px); /* Hauteur ajustée pour occuper l'écran moins la navbar */
+  padding-left: 20px; /* Ajustement de l'espacement si nécessaire */
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #021123;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #7C12DA;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social a {
+  color: white;
+  margin-left: 10px;
+  margin-right: 30px;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social a:hover {
+  color: #7C12DA;
+}
+
+.bouncing-blob {
+  width: 32vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  will-change: transform;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transform-origin: left top;
+}
+
+
+
+.slogan {
+  font-size: 24px; /* Ajustez la taille de la police selon vos besoins */
+  font-weight: bold;
+  color: #021123; /* Couleur du texte */
+  z-index: 10; /* Assurez-vous que le texte est au-dessus des blobs */
+  position: absolute;
+  top: 200px;
+}
+
+.slogan h1 {
+  margin: 50px 0 0 0;
+  font-family: 'Poppins', sans-serif;
+  color: #3d3d3d;
+  font-size: 2em;
+  background: none;
+  font-weight: 900;
+  border: none;
+  text-shadow: -25px 0px 2px #c1c1c1;
+}
+
+.bouncing-blob--blue {
+  background: #4783c7;
+}
+
+.bouncing-blob--white {
+  background: #ffffff;
+  z-index: 2;
+  width: 15vw;
+}
+
+.bouncing-blob--purple {
+  background: #8c8ff1;
+}
+
+.bouncing-blob--pink {
+  background: #e289cd50;
+}
+
+.bouncing-blobs-container {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bouncing-blobs-glass {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(140px);
+  -webkit-backdrop-filter: blur(140px);
+  pointer-events: none;
+}
+
+.bouncing-blobs {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .bouncing-blobs-glass {
+    backdrop-filter: blur(120px);
+    -webkit-backdrop-filter: blur(120px);
+  }
+}
+
+@media (max-width: 500px) {
+  .bouncing-blob {
+    width: 60vw;
+  }
+  .bouncing-blob--white {
+    width: 30vw;
+  }
+  .bouncing-blobs-glass {
+    backdrop-filter: blur(90px);
+    -webkit-backdrop-filter: blur(90px);
+  }
+}
+.new-div {
+  background-color: lightgray; /* Exemple de style pour la nouvelle div */
+  padding: 20px;
+  margin-top: 20px; /* Espacement en haut de la nouvelle div */
+}
+.white-background {
+  position: absolute;
+  top: 100%; /* Commence juste après le contenu principal */
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Couvre toute la hauteur de la fenêtre visible */
+  background-color: white;
+  z-index: -1;
+  opacity: 0; /* Démarre caché */
+  transition: opacity 0.3s ease;
+}
+.about-section {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 28px;
+  color: #021123;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+/* Flex container styles */
+.flex-container {
+  display: flex;
+  justify-content: space-between; /* Espace équitablement les éléments */
+  align-items: flex-start; /* Aligne les éléments en haut */
+  gap: 30px; /* Espacement entre les éléments */
+  margin-top: 40px; /* Espacement du haut */
+}
+
+/* Flex item styles */
+.flex-item {
+  flex: 1 1 300px; /* Ajustement flexible des éléments avec une largeur maximale de 300px */
+  padding: 20px;
+  border-radius: 10px; /* Bordures arrondies */
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour les effets hover */
+  position: relative; /* Position relative pour le positionnement des pseudo-éléments */
+  background-color: #CEC7D4; /* Couleur pour le quatrième item */
+  background-color: ; /* Couleur de fond par défaut */
+  max-width: calc(25% - 30px); /* Largeur maximale de chaque élément, calculée pour l'espacement et le nombre d'éléments */
+  margin: 0 15px 30px 15px; /* Marge autour de chaque élément */
+}
+
+/* Couleur de fond différente pour chaque item */
+.flex-item:nth-child(2) {
+  background-color: #CEC7D4; /* Couleur pour le deuxième item */
+}
+
+.flex-item:nth-child(3) {
+  background-color: #CEC7D4; /* Couleur pour le troisième item */
+}
+
+.flex-item:nth-child(4) {
+  background-color: #CEC7D4; /* Couleur pour le quatrième item */
+}
+
+/* Effet hover pour chaque item */
+.flex-item:hover {
+    transform: translateY(-5px); /* Légère translation vers le haut au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Ombre subtile pour l'effet de profondeur */
+}
+
+/* Titres des items */
+.flex-item h2 {
+    font-size: 20px; /* Taille de police réduite */
+    margin-bottom: 10px;
+}
+
+/* Paragraphes des items */
+.flex-item p {
+    font-size: 14px; /* Taille de police réduite */
+    line-height: 1.5;
+}
+
+/* Pseudo-éléments pour les effets décoratifs */
+.flex-item::before,
+.flex-item::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.05); /* Couleur semi-transparente */
+    z-index: -1;
+    transition: transform 0.3s ease; /* Transition pour les pseudo-éléments */
+}
+
+/* Pseudo-élément avant */
+.flex-item::before {
+    top: 10px;
+    left: 10px;
+}
+
+/* Pseudo-élément après */
+.flex-item::after {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Effet hover pour les pseudo-éléments */
+.flex-item:hover::before {
+    transform: translate(5px, -5px); /* Translation diagonale vers le bas à droite */
+}
+
+.flex-item:hover::after {
+    transform: translate(-5px, 5px); /* Translation diagonale vers le haut à gauche */
+}
+
+@media (max-width: 768px) {
+    .flex-item {
+        max-width: calc(50% - 30px); /* Ajustement pour les écrans plus petits */
+    }
+}
+
+@media (max-width: 500px) {
+    .flex-item {
+        max-width: calc(100% - 30px); /* Ajustement pour les petits écrans */
+    }
+}
+
+.team-section {
+  padding: 50px 20px;
+  background-color: #e9ecef;
+}
+
+.team-content {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.team-content h2 {
+  font-size: 28px;
+  color: #021123;
+  margin-bottom: 40px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-member {
+  flex: 1 1 300px; /* Adaptation flexible des éléments */
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  font-size: 18px;
+  color: #021123;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #666;
+}
+
+.contact-section {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+}
+
+.contact-content {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 28px;
+  color: #021123;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form label {
+  font-size: 16px;
+  color: #021123;
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #4783c7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #305f9e;
+}
+
+.footer {
+  background-image: url('img/bannière_BrainShell.jpg')
+  background-size: cover;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  position: relative; 
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
