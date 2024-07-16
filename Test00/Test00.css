@@ -244,23 +244,23 @@ body {
   color: white;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour les effets hover */
   position: relative; /* Position relative pour le positionnement des pseudo-éléments */
-  background-color: #CEC7D4; /* Couleur pour le quatrième item */
-  background-color: ; /* Couleur de fond par défaut */
+  background-color: #8c8ff1; /* Couleur pour le quatrième item */
   max-width: calc(25% - 30px); /* Largeur maximale de chaque élément, calculée pour l'espacement et le nombre d'éléments */
   margin: 0 15px 30px 15px; /* Marge autour de chaque élément */
+  backdrop-filter: blur(140px);
+  -webkit-backdrop-filter: blur(140px);
 }
 
-/* Couleur de fond différente pour chaque item */
 .flex-item:nth-child(2) {
-  background-color: #CEC7D4; /* Couleur pour le deuxième item */
+  background-color: #8c8ff1; 
 }
 
 .flex-item:nth-child(3) {
-  background-color: #CEC7D4; /* Couleur pour le troisième item */
+  background-color: #8c8ff1;
 }
 
 .flex-item:nth-child(4) {
-  background-color: #CEC7D4; /* Couleur pour le quatrième item */
+  background-color: #8c8ff1;
 }
 
 /* Effet hover pour chaque item */
@@ -378,67 +378,128 @@ body {
 }
 
 .contact-section {
-  padding: 50px 20px;
-  background-color: #f8f9fa;
+  padding: 50px 0;
+  background-color: #f0f0f5;
 }
 
-.contact-content {
-  max-width: 1000px;
-  margin: auto;
+.contact-section .container {
+  width: 50%;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section .header {
   text-align: center;
+  padding-bottom: 20px;
 }
 
-.contact-content h2 {
-  font-size: 28px;
-  color: #021123;
-  margin-bottom: 40px;
+.contact-section .header h1 {
+  font-size: 2.5em;
+  color: #4A148C;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.contact-section .header h3 {
+  font-size: 1.2em;
+  color: #555555;
 }
 
-.contact-form label {
-  font-size: 16px;
-  color: #021123;
-  margin-bottom: 8px;
+.contact-section .body {
+  margin-top: 20px;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-section form ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-section form li {
+  margin-bottom: 20px;
+}
+
+.contact-section form p {
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+}
+
+.contact-section form p.left {
+  width: 48%;
+}
+
+.contact-section form p.pull-right {
+  width: 48%;
+  float: right;
+}
+
+.contact-section form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #4A148C;
+}
+
+.contact-section form input[type="text"],
+.contact-section form input[type="email"],
+.contact-section form textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  color: #555555;
 }
 
-.contact-form textarea {
+.contact-section form input[type="text"]:focus,
+.contact-section form input[type="email"]:focus,
+.contact-section form textarea:focus {
+  border-color: #4A148C;
+  outline: none;
+}
+
+.contact-section .req {
+  color: #ff0000;
+}
+
+.contact-section .divider {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 20px 0;
+}
+
+.contact-section form textarea {
   resize: vertical;
-  min-height: 150px;
 }
 
-.contact-form button {
+.contact-section .btn-submit {
+  background-color: #4A148C;
+  color: #ffffff;
   padding: 10px 20px;
-  background-color: #4783c7;
-  color: white;
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1em;
 }
 
-.contact-form button:hover {
-  background-color: #305f9e;
+.contact-section .btn-submit:hover {
+  background-color: #7B1FA2;
+}
+
+.contact-section small {
+  display: inline-block;
+  margin-top: 10px;
+  color: #555555;
+}
+
+.contact-section strong {
+  color: #4A148C;
 }
 
 .footer {
-  background-image: url('img/bannière_BrainShell.jpg')
-  background-size: cover;
+  background-color: #666;
   color: black;
   text-align: center;
   padding: 20px 0;
