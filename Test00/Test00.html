@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <!-- Meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,25 +102,47 @@
             </div>
         </div>
     </section>
-    <section id="contact" class="contact-section">
-      <div class="contact-content">
-          <h2>Contact</h2>
-          <form action="#" method="POST" class="contact-form">
-              <label for="name">Nom :</label>
-              <input type="text" id="name" name="name" required>
-  
-              <label for="email">Email :</label>
-              <input type="email" id="email" name="email" required>
-  
-              <label for="message">Message :</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-  
-              <button type="submit">Envoyer</button>
-          </form>
-      </div>
-  </section>
-  
 
+    <section class="contact-section">
+        <div class="container">
+          <div class="row header">
+            <h1>Contact &nbsp;</h1>
+            <h3>Remplissez le formulaire ci-dessous pour en savoir plus !</h3>
+          </div>
+          <div class="row body">
+            <form action="#">
+              <ul>
+                <li>
+                  <p class="left">
+                    <label for="first_name">Nom</label>
+                    <input type="text" name="first_name" />
+                  </p>
+                  <p class="pull-right">
+                    <label for="last_name">Prénom</label>
+                    <input type="text" name="last_name" />      
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <label for="email">email <span class="req">*</span></label>
+                    <input type="email" name="email" placeholder="exemple@gmail.com" />
+                  </p>
+                </li>        
+                <li><div class="divider"></div></li>
+                <li>
+                  <label for="comments">commentaire</label>
+                  <textarea cols="46" rows="3" name="comments"></textarea>
+                </li>
+                <li>
+                  <input class="btn btn-submit" type="submit" value="Envoyez" />
+                  <small>ou appuyez sur <strong>entrer</strong></small>
+                </li>
+              </ul>
+            </form>  
+          </div>
+        </div>
+      </section>
+      
       
 
       <!-- Footer -->
@@ -134,13 +156,6 @@
       </div>
     </footer>
     </div>
-
-
-    <div class="container">
-        <div class="spinner">zkjfhzhzf</div>
-    </div>
-
-    
     <!-- JavaScript file -->
     <script src="Test00.js"></script>
 </body>
